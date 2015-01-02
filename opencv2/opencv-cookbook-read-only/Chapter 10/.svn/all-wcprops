@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/Chapter%2010
+END
+BGFGSegmentor.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Chapter%2010/BGFGSegmentor.h
+END
+tracking.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Chapter%2010/tracking.cpp
+END
+videoprocessing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Chapter%2010/videoprocessing.cpp
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2010/README.txt
+END
+foreground.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Chapter%2010/foreground.cpp
+END
+videoprocessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Chapter%2010/videoprocessor.h
+END
+featuretracker.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Chapter%2010/featuretracker.h
+END

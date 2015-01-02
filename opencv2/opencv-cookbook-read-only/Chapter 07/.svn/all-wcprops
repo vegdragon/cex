@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/Chapter%2007
+END
+blobs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/Chapter%2007/blobs.cpp
+END
+edgedetector.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Chapter%2007/edgedetector.h
+END
+linefinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Chapter%2007/linefinder.h
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2007/README.txt
+END
+contours.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Chapter%2007/contours.cpp
+END

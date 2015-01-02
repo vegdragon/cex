@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/Chapter%2009
+END
+CameraCalibrator.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Chapter%2009/CameraCalibrator.h
+END
+estimateF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Chapter%2009/estimateF.cpp
+END
+estimateH.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Chapter%2009/estimateH.cpp
+END
+calibrate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Chapter%2009/calibrate.cpp
+END
+matcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/Chapter%2009/matcher.h
+END
+robustmatching.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Chapter%2009/robustmatching.cpp
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2009/README.txt
+END
+CameraCalibrator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Chapter%2009/CameraCalibrator.cpp
+END

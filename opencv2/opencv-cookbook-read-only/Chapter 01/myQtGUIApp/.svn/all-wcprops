@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp
+END
+ui_mainwindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/ui_mainwindow.h
+END
+myQtGUIApp.pro
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/myQtGUIApp.pro
+END
+Makefile.Debug
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/Makefile.Debug
+END
+mainwindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/mainwindow.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/main.cpp
+END
+mainwindow.ui
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/mainwindow.ui
+END
+Makefile.Release
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/Makefile.Release
+END
+mainwindow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/mainwindow.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Chapter%2001/myQtGUIApp/Makefile
+END

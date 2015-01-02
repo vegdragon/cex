@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/Chapter%2004
+END
+objectfinder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Chapter%2004/objectfinder.cpp
+END
+imageComparator.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Chapter%2004/imageComparator.h
+END
+histograms.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Chapter%2004/histograms.cpp
+END
+colorhistogram.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Chapter%2004/colorhistogram.h
+END
+histogram.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/Chapter%2004/histogram.h
+END
+objectFinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Chapter%2004/objectFinder.h
+END
+retrieve.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Chapter%2004/retrieve.cpp
+END
+finder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2004/finder.cpp
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Chapter%2004/README.txt
+END
