@@ -19,8 +19,8 @@ int longestDistance(const char * strA, const char * strB)
   const int lenB = strlen(strB);
   int i=0; int j=0;
 
-  int ** matrix = new int*[lenB+1];
-  for (i=0;i<=lenB;i++) matrix[i] = new int[lenA+1];
+  int ** matrix = new int*[lenA+1];
+  for (i=0;i<=lenA;i++) matrix[i] = new int[lenB+1];
 
   if (matrix == NULL) goto ret;
 
@@ -41,7 +41,7 @@ int longestDistance(const char * strA, const char * strB)
   }
   result = matrix[lenA][lenB];
 
-  for (i=0;i<=lenB;i++) delete [] matrix[i];
+  for (i=0;i<=lenA;i++) delete [] matrix[i];
   delete [] matrix;
 
 ret:
