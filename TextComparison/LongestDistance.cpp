@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -27,6 +28,15 @@ int min (int a, int b, int c)
   return result;
 }
 
+void printMatrix (int ** matrix, int lenX, int lenY)
+{
+    for (int y=0;y<lenY;y++)
+    {
+      for (int x=0;x<lenX;x++) printf("%d\t", matrix[y][x]);
+      printf("\n");
+    }
+}
+
 void snake (int ** matrix, const char * strA, const char * strB)
 {
   const int lenA = strlen(strA);
@@ -42,45 +52,54 @@ void snake (int ** matrix, const char * strA, const char * strB)
   int rx = lenResult;
   int ry = lenResult;
 
+  printMatrix (matrix, lenB+1, lenA+1);
+
   do {
+    printf ("x=%d, y=%d\n", x, y);
     if (y==0 && x>0) 
     {
       strResultA[ry--] = '_';
-      strResultB[rx--] = strB[x];
+      strResultB[rx--] = strB[x-1];
       x--;
+      continue;
     }
     if (x==0 && y>0)
     {
-      strResultA[ry--] = strA[y];
+      strResultA[ry--] = strA[y-1];
       strResultB[rx--] = '_';
       y--;
+      continue;
     }
-
-    if (strA[y] == strB[x]) 
+    
+    printf ("strA[y]=%c, strB[x]=%c\n", strA[y-1], strB[x-1]);
+    if (strA[y-1] == strB[x-1]) 
     { 
-      strResultA[ry--] = strA[y];
-      strResultB[rx--] = strB[x];
-      x--; y--; 
+      strResultA[ry--] = strA[y-1];
+      strResultB[rx--] = strB[x-1];
+      x--; y--;
     }
     else {
       int a = matrix[y-1][x-1];
       int b = matrix[y-1][x];
       int c = matrix[y][x-1];
-
       int idx = minIdx (a, b);
+
+      printf ("a=%d, b=%d, c=%d\n", a, b, c);
       if (idx == 0) // a <= b
       {
         idx = minIdx (a, c);
         if (idx == 0) // a <=c, scenario a
-        { 
-          strResultA[ry--] = strA[y];
-          strResultB[rx--] = strB[x];        
+        {
+          printf ("  scenario a\n"); 
+          strResultA[ry--] = strA[y-1];
+          strResultB[rx--] = strB[x-1];        
           x--; y--; 
         }
         else if (idx == 1) // c < a <= b, scenario c
         {
+          printf ("  scenario c\n");
           strResultA[ry--] = '_';
-          strResultB[rx--] = strB[x];
+          strResultB[rx--] = strB[x-1];
           x--; 
         }
       }
@@ -89,7 +108,8 @@ void snake (int ** matrix, const char * strA, const char * strB)
          idx = minIdx (b, c);
          if (idx == 0) // scenario b
          { 
-           strResultA[ry--] = strA[y];
+           printf ("  scenario b\n");
+           strResultA[ry--] = strA[y-1];
            strResultB[rx--] = '_';
            y--;
          }
@@ -97,8 +117,8 @@ void snake (int ** matrix, const char * strA, const char * strB)
     }
   } while (x>=0 || y>=0);
 
-  cout << strResultA << endl;
-  cout << strResultB << endl;
+  cout << strResultA+1 << endl;
+  cout << strResultB+1 << endl;
 
   delete [] strResultA;
   delete [] strResultB;
@@ -149,6 +169,8 @@ int main()
   const char strA[] = "GGATCGA";
   const char strB[] = "GAATTCAGTTA";
 
+  //const char strA[] = "CDE#FG#AB";
+  //const char strB[] = "DDEFGAC";
   cout<<longestDistance(strA, strB)<<endl;
 
   return 0;
