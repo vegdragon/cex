@@ -7,6 +7,9 @@
 
 using namespace std;
 
+typedef void (^SwiftCallbackFunc(unsigned char *)); 
+SwiftCallbackFunc swiftFunc;
+
 //------------------------------------------------------------算法1输出所有组合
 //cards[i]的值是通过表达式expr[i]计算而来
 //且expr的最后一个运算操作lastop[i]
@@ -18,6 +21,7 @@ bool GameRecur_all(double cards[], string expr[], char lastop[],
         if(cards[0] == result)
         {
             cout<<"formular: "<<expr[0]<<endl;
+            swiftFunc(expr[0].c_str());
             return true;
         }
         else return false;
@@ -163,4 +167,11 @@ int generateCards(void)
 
   return 0;
 }
+
+void registerCallback(void (^callbackFunc(unsigned char *))
+{
+    swiftFunc = callbackFunc;
 }
+
+
+} /* end of extern "C" */

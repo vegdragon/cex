@@ -166,11 +166,11 @@ ret:
 
 int main()
 {
-  const char strA[] = "GGATCGA";
-  const char strB[] = "GAATTCAGTTA";
+  //const char strA[] = "GGATCGA";
+  //const char strB[] = "GAATTCAGTTA";
 
-  //const char strA[] = "CDE#FG#AB";
-  //const char strB[] = "DDEFGAC";
+  const char strA[] = "CDE#FG#AB";
+  const char strB[] = "DDEFGAC";
   cout<<longestDistance(strA, strB)<<endl;
 
   return 0;
