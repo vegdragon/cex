@@ -21,26 +21,17 @@ class ViewController: UIViewController {
         btnRunit.title = "RunIt"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        var swiftCallback: () -> Void = getFormular
-        registerCallback (swiftCallback)
-    }
 
     @IBAction func runIt(_ sender: Any)
     {
-        generateCards();
-    }
+        let solution = String(cString: generateCards())
 
-    func getFormular(cStringPointer: UnsafeMutablePointer<UnsafePointer<Int8>>)
-    {
-        guard let strFormular = String.fromCString(cStringPointer.memory) else { return nil }
-
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) 
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async
         {
-            dispatch_async(dispatch_get_main_queue()) {
-                self.lblFormular.text = strFomular
-            }   
+            DispatchQueue.main.async
+            {
+                self.lblFormular.text = solution
+            }
         }
     }
 }

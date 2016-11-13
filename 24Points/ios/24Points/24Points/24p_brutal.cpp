@@ -7,8 +7,42 @@
 
 using namespace std;
 
-typedef void (^SwiftCallbackFunc(unsigned char *)); 
-SwiftCallbackFunc swiftFunc;
+void PointGame_all(int cards[], const int cardsNum, const int result);
+// extern "C" required to avoid implicit func rename for C++, which leads to link error
+extern "C" {
+    typedef void (^SwiftCallbackFunc)(int64_t);
+    SwiftCallbackFunc gSwiftFunc;
+    
+    int generateCards(void)
+    {
+        int cards[4] = { 0, 0, 0, 0 };
+        int cardsNum = sizeof(cards)/sizeof(int);
+        
+        srand(time(NULL));
+        for (int i=0;i<cardsNum;i++)
+        {
+            cards[i] = rand() % 10 + 1;
+            printf ("%d ", cards[i]);
+        }
+        printf ("\n");
+        
+        PointGame_all (cards, cardsNum, 24);
+        
+        return 0;
+    }
+    
+    void registerCallback(void (^callbackFunc)(int64_t))
+    {
+        cout<<"register: "<<callbackFunc<<endl;
+        cout<<"addr: "<<&gSwiftFunc<<endl;
+
+        gSwiftFunc = callbackFunc;
+    }
+    
+    
+} /* end of extern "C" */
+
+
 
 //------------------------------------------------------------算法1输出所有组合
 //cards[i]的值是通过表达式expr[i]计算而来
@@ -16,12 +50,16 @@ SwiftCallbackFunc swiftFunc;
 bool GameRecur_all(double cards[], string expr[], char lastop[],
                    const int cardsNum, const int result)
 {
+    cout<<"addr1: "<<&gSwiftFunc<<endl;
+    cout<<"gSwiftFunc = "<<gSwiftFunc<<endl;
     if(cardsNum == 1)
     {
         if(cards[0] == result)
         {
             cout<<"formular: "<<expr[0]<<endl;
-            swiftFunc(expr[0].c_str());
+            cout<<"gSwiftFunc = "<<gSwiftFunc<<endl;
+            cout<<"addr2: "<<&gSwiftFunc<<endl;
+            gSwiftFunc((int64_t)("Hello"));
             return true;
         }
         else return false;
@@ -148,30 +186,3 @@ void PointGame_all(int cards[], const int cardsNum, const int result)
     delete [] expr;
 }
 
-// extern "C" required to avoid implicit func rename for C++, which leads to link error 
-extern "C" {
-int generateCards(void)
-{
-  int cards[4] = { 0, 0, 0, 0 };
-  int cardsNum = sizeof(cards)/sizeof(int);
-  
-  srand(time(NULL));
-  for (int i=0;i<cardsNum;i++)
-  {
-    cards[i] = rand() % 10 + 1;
-    printf ("%d ", cards[i]);
-  }
-  printf ("\n");
-
-  PointGame_all (cards, cardsNum, 24);
-
-  return 0;
-}
-
-void registerCallback(void (^callbackFunc(unsigned char *))
-{
-    swiftFunc = callbackFunc;
-}
-
-
-} /* end of extern "C" */
