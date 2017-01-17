@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE02A4391DD6CAFF000893F1 /* 24p_dp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE02A4381DD6CAFF000893F1 /* 24p_dp.cpp */; };
 		AEBA546D1DD35F3F002C3D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA546C1DD35F3F002C3D04 /* AppDelegate.swift */; };
 		AEBA546F1DD35F3F002C3D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA546E1DD35F3F002C3D04 /* ViewController.swift */; };
 		AEBA54721DD35F3F002C3D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA54701DD35F3F002C3D04 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		AEBA547A1DD35F3F002C3D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA54781DD35F3F002C3D04 /* LaunchScreen.storyboard */; };
 		AEBA54851DD35F3F002C3D04 /* _4PointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA54841DD35F3F002C3D04 /* _4PointsTests.swift */; };
 		AEBA54901DD35F3F002C3D04 /* _4PointsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA548F1DD35F3F002C3D04 /* _4PointsUITests.swift */; };
-		AEBA549F1DD3623F002C3D04 /* 24p_brutal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEBA549E1DD3623F002C3D04 /* 24p_brutal.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE02A4381DD6CAFF000893F1 /* 24p_dp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 24p_dp.cpp; sourceTree = "<group>"; };
 		AEBA54691DD35F3F002C3D04 /* 24Points.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24Points.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA546C1DD35F3F002C3D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBA546E1DD35F3F002C3D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		AEBA548F1DD35F3F002C3D04 /* _4PointsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4PointsUITests.swift; sourceTree = "<group>"; };
 		AEBA54911DD35F3F002C3D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBA549D1DD3623E002C3D04 /* 24Points-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "24Points-Bridging-Header.h"; sourceTree = "<group>"; };
-		AEBA549E1DD3623F002C3D04 /* 24p_brutal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 24p_brutal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		AEBA546B1DD35F3F002C3D04 /* 24Points */ = {
 			isa = PBXGroup;
 			children = (
-				AEBA549E1DD3623F002C3D04 /* 24p_brutal.cpp */,
+				AE02A4381DD6CAFF000893F1 /* 24p_dp.cpp */,
 				AEBA546C1DD35F3F002C3D04 /* AppDelegate.swift */,
 				AEBA546E1DD35F3F002C3D04 /* ViewController.swift */,
 				AEBA54701DD35F3F002C3D04 /* Main.storyboard */,
@@ -201,6 +201,7 @@
 				TargetAttributes = {
 					AEBA54681DD35F3F002C3D04 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HW3344VPT2;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -270,7 +271,7 @@
 			files = (
 				AEBA546F1DD35F3F002C3D04 /* ViewController.swift in Sources */,
 				AEBA546D1DD35F3F002C3D04 /* AppDelegate.swift in Sources */,
-				AEBA549F1DD3623F002C3D04 /* 24p_brutal.cpp in Sources */,
+				AE02A4391DD6CAFF000893F1 /* 24p_dp.cpp in Sources */,
 				AEBA54751DD35F3F002C3D04 /* _4Points.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,13 +425,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HW3344VPT2;
 				INFOPLIST_FILE = 24Points/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baresi.games.-4Points";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "24Points/24Points-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,12 +444,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HW3344VPT2;
 				INFOPLIST_FILE = 24Points/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baresi.games.-4Points";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "24Points/24Points-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -521,6 +530,7 @@
 				AEBA54961DD35F3F002C3D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBA54971DD35F3F002C3D04 /* Build configuration list for PBXNativeTarget "24PointsTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +539,7 @@
 				AEBA54991DD35F3F002C3D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBA549A1DD35F3F002C3D04 /* Build configuration list for PBXNativeTarget "24PointsUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +548,7 @@
 				AEBA549C1DD35F3F002C3D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
